@@ -1,0 +1,34 @@
+First Question that will come to everyone's mind "is it Authentication or Authorization"?
+
+Well, it is Authorization, to be precise authorization between services. Now next doubt that would arise is why the services would be communicating with each other, generally in API environment what happens is, it is actually user and API exchange information or vice-versa. But hold on, when there two or more services along with the user involved in communication, then there should be some way so that the services should know each other at least an introduction!! to whom they are dealing with and this introduction happens on behalf of user with the help of "Token" and this whole process in known as oauth2.0.
+
+Example:
+
+Let say there are three entities user, MyApp1 and MyApp2
+
+User wants to use one feature of MyApp1 but that feature in MyApp1 will require some input data(say file,videos etc). This data is actually stored in MyApp2(suppose in google drive). Now the user wants that MyApp1 should directly communicate with MyApp2 take the required data from there and use it, what the user is actually interested is "End Result".Given the scenario now we can dive in to more technical aspect.
+
+Resouce Owner -> The user is resource owner.
+
+Client - > MyApp1 is the client because it is actually using some features/services of MyApp2.
+
+Resource Server -> MyApp2 is Resource Server.
+
+AuthServer -> what is this??? his name was mentioned in our example. This server is actually sometimes is part of Resource Server. It is responsible to generate the "Token" used for authorization.
+
+No alt text provided for this image
+This is a basic authorization code flow depicted above, it will explain what the oauth2.0 flow is like:
+
+User sents a request to MyApp1 to do some task.
+MyApp1 need some input from MyApp2 so it will contact Authorization server to have access for the same.
+Auth Server will say to MyApp1 wait who are you i don't you let me check with my user.
+User will check the message from Auth Server and will say yes it is a legit request from MyApp1 please do the needful.
+Auth Server will say Ok,fine and it will give one "Auth Token" to MyApp1. One important point here "By Auth token MyApp1 is only authorized to use the neccessary functionality/Api of MyApp2 i.e. to get some data required here, it is not entitled to access anything extra".
+MyApp1 - Thanks for the authorization AuthServer, kindly please give me access to the required functionality of MyApp2.
+Auth Server - Sure, please find your "Access Token".
+Using this access token MyApp1 will sent a request to MyApp2.
+MyApp2 will finally get the response.
+** Here Access Token for more security point of view else it can happen that these auth token can be used by some other applications.
+
+** The Access token are not neccessarily used in Javascript applications.
+
