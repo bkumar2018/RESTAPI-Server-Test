@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name=" Test - Suite" duration-ms="1033" started-at="2020-05-03T16:25:32Z" finished-at="2020-05-03T16:25:33Z">
+    <groups>
+    </groups>
+    <test name="REST API Test - TestNG" duration-ms="1033" started-at="2020-05-03T16:25:32Z" finished-at="2020-05-03T16:25:33Z">
+      <class name="com.qa.test.RESTAPITestRunner">
+        <test-method status="PASS" signature="testApi()[pri:0, instance:com.qa.test.RESTAPITestRunner@dfd3711]" name="testApi" duration-ms="1022" started-at="2020-05-03T21:55:32Z" finished-at="2020-05-03T21:55:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApi -->
+      </class> <!-- com.qa.test.RESTAPITestRunner -->
+    </test> <!-- REST API Test - TestNG -->
+  </suite> <!--  Test - Suite -->
+</testng-results>

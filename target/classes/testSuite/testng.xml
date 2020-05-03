@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name=" Test - Suite">
+	<test name="REST API Test - TestNG">
+		<classes>
+			<class name="com.qa.test.RESTAPITestRunner" />
+			
+		</classes>
+	</test>
+</suite>

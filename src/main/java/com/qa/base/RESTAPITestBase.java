@@ -13,7 +13,7 @@ public class RESTAPITestBase {
 		prop = new Properties();
 		
 		try{
-			FileInputStream fin = new FileInputStream("D:\\java_tut\\Eclipse_wrk\\RESTAPI-Server-Test\\src\\main\\java\\com\\qa\\config\\config.properties");
+			FileInputStream fin = new FileInputStream("D:\\Automation\\Git-Projects\\RESTAPI-Server-Test\\src\\main\\java\\com\\qa\\config\\config.properties");
 			prop.load(fin);
 		}catch(IOException e){
 			e.printStackTrace();
