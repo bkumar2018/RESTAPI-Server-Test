@@ -11,9 +11,9 @@
 	<name>RESTAPI-Server-Test</name>
 	<url>http://maven.apache.org</url>
 
-	<properties>
+<!-- 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+	</properties> -->
 
 	<build>
 		<plugins>
@@ -25,6 +25,8 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<fork>true</fork>
+                    <executable>C:\Program Files\Java\jdk1.8.0_161\bin\javac</executable>
 				</configuration>
 			</plugin>
 
@@ -63,7 +65,7 @@
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>3.0.0</version>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>

@@ -13,6 +13,7 @@ public class RESTAPITestRunner  {
 		ep.testApiEndPoint();
 		ep.testApiEndPointUsersDetails();
 		ep.testApiEndPointUsersIdDetails();
+		ep.testApiEndPointPost();
 		
 	}
 }
